@@ -15,7 +15,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
 
 ### Server
 
-[Express](https://www.npmjs.com/package/express) as the web server with body parser to serve static resources.
+[Express](https://www.npmjs.com/package/express) as the web server with [body parser](https://www.npmjs.com/package/body-parser) to serve static resources.
 
 ### Client
 
