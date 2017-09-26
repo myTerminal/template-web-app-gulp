@@ -86,7 +86,7 @@ gulp.task('scripts-debug', function () {
         entries: sourceDir + '/scripts/app.js',
         debug: true
     })
-        .transform("babelify", { presets: ["es2015"] })
+        .transform("babelify", { presets: ["env"] })
         .bundle()
         .pipe(source('scripts.js'))
         .pipe(buffer())
@@ -98,7 +98,7 @@ gulp.task('scripts', function () {
         entries: sourceDir + '/scripts/app.js',
         debug: true
     })
-        .transform("babelify", { presets: ["es2015"] })
+        .transform("babelify", { presets: ["env"] })
         .bundle()
         .pipe(source('scripts.js'))
         .pipe(buffer())
