@@ -41,7 +41,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) to minify JavaScript files
  - [gulp-angular-templatecache](https://www.npmjs.com/package/gulp-angular-templatecache) to compile AngularJS templates
  - [gulp-watch-now](https://www.npmjs.com/package/gulp-watch-now) to watch over source files and run appropriate tasks
- - [babelify](https://www.npmjs.com/package/babelify) and [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) for ES2015 transpilation
+ - [babelify](https://www.npmjs.com/package/babelify) and [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) for ES2015 transpilation
  - [browserify](https://www.npmjs.com/package/browserify) to `require` JavaScript libraries from within the web browser
  - [vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer) and [vinyl-source-stream](https://www.npmjs.com/package/vinyl-source-stream) to work with browserify
 
