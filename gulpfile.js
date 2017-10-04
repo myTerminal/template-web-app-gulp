@@ -38,6 +38,22 @@ gulp.task('copy-bootstrap-fonts', function () {
     }));
 });
 
+gulp.task('copy-font-awesome-css', function () {
+    return gulp.src([
+        'node_modules/font-awesome/css/font-awesome.min.css'
+    ]).pipe(copy(outputDir + '/styles/vendor/font-awesome/css', {
+        prefix: 4
+    }));
+});
+
+gulp.task('copy-font-awesome-fonts', function () {
+    return gulp.src([
+        'node_modules/font-awesome/fonts/**/*'
+    ]).pipe(copy(outputDir + '/styles/vendor/font-awesome/fonts', {
+        prefix: 4
+    }));
+});
+
 gulp.task('copy-html', function () {
     return gulp.src([
         sourceDir + '/*.html'
@@ -60,6 +76,8 @@ gulp.task('copy-others', function () {
 gulp.task('copy', [
     'copy-bootstrap-css',
     'copy-bootstrap-fonts',
+    'copy-font-awesome-css',
+    'copy-font-awesome-fonts',
     'copy-html',
     'copy-others'
 ]);

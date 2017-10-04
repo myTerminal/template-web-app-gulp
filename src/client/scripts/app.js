@@ -31,7 +31,7 @@ angular.module("templateWeb", ["ui.router"])
                     function ($scope, $http) {
                         var self = this;
 
-                        self.getMessage = () => "This is template 1";
+                        self.getMessage = () => "This is a template";
                     }
                 ]);
 
