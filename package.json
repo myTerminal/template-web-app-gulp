@@ -5,7 +5,6 @@
   "main": "src/server/index.js",
   "scripts": {
     "gulp": "gulp",
-    "develop": "gulp develop",
     "start": "node starter.js"
   },
   "repository": {
@@ -40,10 +39,14 @@
     "gulp-cleancss": "0.2.2",
     "gulp-concat": "2.6.1",
     "gulp-copy": "1.0.1",
+    "gulp-jscs": "4.0.0",
+    "gulp-jshint": "2.0.4",
     "gulp-less": "3.3.2",
     "gulp-sync": "0.1.4",
     "gulp-uglify": "3.0.0",
     "gulp-watch-now": "0.9.1",
+    "jshint": "2.9.5",
+    "jshint-stylish": "2.2.1",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0"
   }

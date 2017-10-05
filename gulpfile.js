@@ -11,6 +11,9 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-cleancss'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    jshint = require('gulp-jshint'),
+    jshintStylish = require('jshint-stylish'),
+    jscs = require('gulp-jscs'),
     gulpSync = require('gulp-sync')(gulp),
     watchNow = require('gulp-watch-now'),
     source = require('vinyl-source-stream'),
@@ -124,12 +127,21 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(outputDir + '/scripts/'));
 });
 
-gulp.task('build', gulpSync.sync([
-    'clean',
-    'copy',
-    'templates',
-    'styles',
-    'scripts'
+gulp.task('jshint', function () {
+    return gulp.src(sourceDir + '/scripts/**/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter(jshintStylish, { beep: true }));
+});
+
+gulp.task('jscs', function () {
+    return gulp.src(sourceDir + '/scripts/**/*.js')
+        .pipe(jscs())
+        .pipe(jscs.reporter());
+});
+
+gulp.task('lint', gulpSync.sync([
+    'jshint',
+    'jscs'
 ]));
 
 gulp.task('debug', gulpSync.sync([
@@ -137,7 +149,16 @@ gulp.task('debug', gulpSync.sync([
     'copy',
     'templates',
     'styles',
-    'scripts-debug'
+    'scripts-debug',
+    'lint'
+]));
+
+gulp.task('build', gulpSync.sync([
+    'clean',
+    'copy',
+    'templates',
+    'styles',
+    'scripts'
 ]));
 
 gulp.task('develop', function() {
