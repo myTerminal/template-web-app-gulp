@@ -116,8 +116,7 @@ gulp.task('scripts-debug', function () {
 
 gulp.task('scripts', function () {
     return browserify({
-        entries: sourceDir + '/scripts/app.js',
-        debug: true
+        entries: sourceDir + '/scripts/app.js'
     })
         .transform("babelify", { presets: ["env"] })
         .bundle()
