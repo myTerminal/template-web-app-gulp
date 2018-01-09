@@ -39,14 +39,14 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [gulp-copy](https://www.npmjs.com/package/gulp-copy) to copy static resources to the output directory
  - [gulp-less](https://www.npmjs.com/package/gulp-less) to transpile LESS stylesheets into CSS
  - [gulp-cleancss](https://www.npmjs.com/package/gulp-cleancss) to minify CSS
- - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) to minify JavaScript files
- - [gulp-jshint](https://www.npmjs.com/package/gulp-jshint) to find and report JSHint issues in JavaScript
- - [gulp-jscs](https://www.npmjs.com/package/gulp-jscs) to find and report code styling issues in JavaScript
- - [gulp-angular-templatecache](https://www.npmjs.com/package/gulp-angular-templatecache) to compile AngularJS templates
- - [gulp-watch-now](https://www.npmjs.com/package/gulp-watch-now) to watch over source files and run appropriate tasks
- - [babelify](https://www.npmjs.com/package/babelify) and [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) for ES2015 transpilation
  - [browserify](https://www.npmjs.com/package/browserify) to `require` JavaScript libraries from within the web browser
  - [vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer) and [vinyl-source-stream](https://www.npmjs.com/package/vinyl-source-stream) to work with browserify
+ - [babelify](https://www.npmjs.com/package/babelify) and [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) for ES2015 transpilation
+ - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) to minify JavaScript files
+ - [gulp-angular-templatecache](https://www.npmjs.com/package/gulp-angular-templatecache) to compile AngularJS templates
+ - [gulp-jshint](https://www.npmjs.com/package/gulp-jshint) to find and report JSHint issues in JavaScript
+ - [gulp-jscs](https://www.npmjs.com/package/gulp-jscs) to find and report code styling issues in JavaScript
+ - [gulp-watch-now](https://www.npmjs.com/package/gulp-watch-now) to watch over source files and run appropriate tasks
  - [jshint](https://www.npmjs.com/package/jshint) as a dependency for gulp-jshint
  - [jshint-stylish](https://www.npmjs.com/package/jshint-stylish) as a reporter for jshint
 
