@@ -77,3 +77,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
    - run JSHint over JavaScript files
    - run JSCS over JavaScript files
  - develop to watch over the source files and run tasks related to the changed files
+
+## To-Do
+
+ - Find a way to write and run tests
