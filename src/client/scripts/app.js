@@ -1,5 +1,7 @@
 /* global global require */
 
+require('./service-worker-starter');
+
 global.jQuery = require('jquery');
 
 var angular = require('angular'),

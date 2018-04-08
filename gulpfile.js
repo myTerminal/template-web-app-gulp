@@ -2,10 +2,12 @@
 
 const sourceDir = 'src/client';
 const outputDir = 'public';
+const configs = require('./configs.json');
 
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
     copy = require('gulp-copy'),
+    that = require('gulp-that'),
     angularTemplateCache = require('gulp-angular-templatecache'),
     less = require('gulp-less'),
     cleanCSS = require('gulp-cleancss'),
@@ -126,6 +128,16 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(outputDir + '/scripts/'));
 });
 
+gulp.task('copy-service-worker', function () {
+    return gulp.src([
+        sourceDir + '/sw.js'
+    ]).pipe(that(function (input) {
+        return input
+            .replace(/#sw-cache-string#/g, (new Date().getTime()))
+            .replace(/#sw-origin#/g, configs.origin);
+    })).pipe(gulp.dest(outputDir));
+});
+
 gulp.task('jshint', function () {
     return gulp.src(sourceDir + '/scripts/**/*.js')
         .pipe(jshint())
@@ -157,7 +169,8 @@ gulp.task('build', gulpSync.sync([
     'copy',
     'templates',
     'styles',
-    'scripts'
+    'scripts',
+    'copy-service-worker'
 ]));
 
 gulp.task('develop', function() {

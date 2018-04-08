@@ -36,6 +36,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [gulp-sync](https://www.npmjs.com/package/gulp-sync) to be able to run tasks synchronously
  - [gulp-concat](https://www.npmjs.com/package/gulp-concat) to concat files
  - [gulp-copy](https://www.npmjs.com/package/gulp-copy) to copy static resources to the output directory
+ - [gulp-that](https://www.npmjs.com/package/gulp-that) to transform service-worker script to make sure it is updated on every build
  - [gulp-less](https://www.npmjs.com/package/gulp-less) to transpile LESS stylesheets into CSS
  - [gulp-cleancss](https://www.npmjs.com/package/gulp-cleancss) to minify CSS
  - [browserify](https://www.npmjs.com/package/browserify) to `require` JavaScript libraries from within the web browser
@@ -61,6 +62,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
    - templates to compile AngularJS templates
    - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
    - scripts to concatenate, transpile & minify all JavaScript to the output directory
+   - copy-service-worker to copy the service-worker script to the output directory after a few transforms
  - debug
    - clean to clean the output directory
    - copy
