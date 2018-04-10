@@ -59,14 +59,6 @@ gulp.task('copy-font-awesome-fonts', function () {
     }));
 });
 
-gulp.task('copy-html', function () {
-    return gulp.src([
-        sourceDir + '/*.html'
-    ]).pipe(copy(outputDir, {
-        prefix: 4
-    }));
-});
-
 gulp.task('copy-others', function () {
     return gulp.src([
         sourceDir + '/data/**/*',
@@ -83,7 +75,6 @@ gulp.task('copy', [
     'copy-bootstrap-fonts',
     'copy-font-awesome-css',
     'copy-font-awesome-fonts',
-    'copy-html',
     'copy-others'
 ]);
 
@@ -128,6 +119,24 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(outputDir + '/scripts/'));
 });
 
+gulp.task('html-debug', function () {
+    return gulp.src([
+        sourceDir + '/*.html'
+    ]).pipe(that(function (input) {
+        return input
+            .replace(/#cache-buster-token#/g, '');
+    })).pipe(gulp.dest(outputDir));
+});
+
+gulp.task('html', function () {
+    return gulp.src([
+        sourceDir + '/*.html'
+    ]).pipe(that(function (input) {
+        return input
+            .replace(/#cache-buster-token#/g, (new Date()).getTime());
+    })).pipe(gulp.dest(outputDir));
+});
+
 gulp.task('copy-service-worker', function () {
     return gulp.src([
         sourceDir + '/sw.js'
@@ -161,6 +170,7 @@ gulp.task('debug', gulpSync.sync([
     'templates',
     'styles',
     'scripts-debug',
+    'html-debug',
     'lint'
 ]));
 
@@ -170,6 +180,7 @@ gulp.task('build', gulpSync.sync([
     'templates',
     'styles',
     'scripts',
+    'html',
     'copy-service-worker'
 ]));
 
@@ -177,7 +188,7 @@ gulp.task('develop', function() {
     watchNow.watch(gulp, [
         sourceDir + '/*.html'
     ], [
-        'copy-html'
+        'html-debug'
     ]);
 
     watchNow.watch(gulp, [
