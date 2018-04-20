@@ -44,11 +44,8 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [babelify](https://www.npmjs.com/package/babelify) and [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) for ES2015 transpilation
  - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) to minify JavaScript files
  - [gulp-angular-templatecache](https://www.npmjs.com/package/gulp-angular-templatecache) to compile AngularJS templates
- - [gulp-jshint](https://www.npmjs.com/package/gulp-jshint) to find and report JSHint issues in JavaScript
- - [gulp-jscs](https://www.npmjs.com/package/gulp-jscs) to find and report code styling issues in JavaScript
+ - [gulp-eslint](https://www.npmjs.com/package/gulp-eslint), [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import), [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) and [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) to run ESLint on JavaScript files
  - [gulp-watch-now](https://www.npmjs.com/package/gulp-watch-now) to watch over source files and run appropriate tasks
- - [jshint](https://www.npmjs.com/package/jshint) as a dependency for gulp-jshint
- - [jshint-stylish](https://www.npmjs.com/package/jshint-stylish) as a reporter for jshint
 
 ##### Tasks
 
@@ -73,10 +70,9 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
    - templates to compile AngularJS templates
    - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
    - scripts-debug to concatenate and transpile all JavaScript to the output directory
-   - lint to run JSHint and JSCS over JavaScript files
+   - lint to run ESLint over JavaScript files
  - lint
-   - run JSHint over JavaScript files
-   - run JSCS over JavaScript files
+   - run ESLint over JavaScript files
  - develop to watch over the source files and run tasks related to the changed files
 
 ## To-Do
