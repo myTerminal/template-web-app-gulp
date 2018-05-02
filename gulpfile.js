@@ -62,6 +62,8 @@ gulp.task('copy-others', function () {
         sourceDir + '/data/**/*',
         sourceDir + '/fonts/**/*',
         sourceDir + '/images/**/*',
+        sourceDir + '/icons/**/*',
+        sourceDir + '/manifest.json',
         sourceDir + '/favicon.ico'
     ]).pipe(copy(outputDir, {
         prefix: 2
