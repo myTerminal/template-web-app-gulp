@@ -1,8 +1,6 @@
 # template-web-gulp
 
-[![Code Climate](https://codeclimate.com/github/myTerminal/template-web-gulp.png)](https://codeclimate.com/github/myTerminal/template-web-gulp)
-[![bitHound Overall Score](https://www.bithound.io/github/myTerminal/template-web-gulp/badges/score.svg)](https://www.bithound.io/github/myTerminal/template-web-gulp)
-[![bitHound Code](https://www.bithound.io/github/myTerminal/template-web-gulp/badges/code.svg)](https://www.bithound.io/github/myTerminal/template-web-gulp)  
+[![Code Climate](https://codeclimate.com/github/myTerminal/template-web-gulp.png)](https://codeclimate.com/github/myTerminal/template-web-gulp)  
 [![Dependency Status](https://david-dm.org/myTerminal/template-web-gulp.svg)](https://david-dm.org/myTerminal/template-web-gulp)
 [![devDependency Status](https://david-dm.org/myTerminal/template-web-gulp/dev-status.svg)](https://david-dm.org/myTerminal/template-web-gulp#info=devDependencies)
 [![peer Dependency Status](https://david-dm.org/myTerminal/template-web-gulp/peer-status.svg)](https://david-dm.org/myTerminal/template-web-gulp#info=peerDependencies)  
