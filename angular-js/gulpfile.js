@@ -100,7 +100,7 @@ gulp.task('scripts-debug', function () {
         entries: sourceDir + '/scripts/app.js',
         debug: true
     })
-        .transform("babelify", { presets: ["env"] })
+        .transform('babelify', { presets: ['env'] })
         .bundle()
         .pipe(source('scripts.js'))
         .pipe(buffer())
@@ -111,7 +111,7 @@ gulp.task('scripts', function () {
     return browserify({
         entries: sourceDir + '/scripts/app.js'
     })
-        .transform("babelify", { presets: ["env"] })
+        .transform('babelify', { presets: ['env'] })
         .bundle()
         .pipe(source('scripts.js'))
         .pipe(buffer())
