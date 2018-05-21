@@ -1,0 +1,25 @@
+{
+  "short_name": "template-web",
+  "name": "template-web-webpack: A template to create web applications",
+  "icons": [
+    {
+      "src": "icons/launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icons/launcher-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icons/launcher-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?launcher=true",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000"
+}

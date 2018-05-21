@@ -1,0 +1,43 @@
+@import 'mixins.less';
+
+@font-face {
+    font-family: OpenSans;
+    src: url('/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: OpenSans;
+    font-weight: bold;
+    src: url('/fonts/OpenSans-Bold.ttf');
+}
+
+html {
+    margin: 0;
+    padding: 0;
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        color: #00f;
+        font-family: OpenSans;
+
+        #page {
+
+            a {
+                margin: 25px;
+
+                &.active {
+                    color: Red;
+                }
+            }
+
+            .banner {
+                width: 100%;
+                height: 480px;
+                background-image: url('/images/pencils.jpg');
+                background-size: cover;
+            }
+        }
+    }
+}

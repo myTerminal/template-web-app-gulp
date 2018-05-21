@@ -1,0 +1,57 @@
+{
+  "name": "template-web",
+  "version": "0.9.0",
+  "description": "template-web",
+  "main": "src/server/index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "start": "node starter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:myTerminal/template-web-gulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/myTerminal/template-web-gulp/issues"
+  },
+  "homepage": "https://github.com/myTerminal/template-web-gulp#readme",
+  "keywords": [
+    "template"
+  ],
+  "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "bootstrap": "3.3.7",
+    "express": "4.16.3",
+    "font-awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
+    "react-router-dom": "4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babelify": "8.0.0",
+    "browserify": "16.2.2",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.7.0",
+    "gulp": "3.9.1",
+    "gulp-clean": "0.4.0",
+    "gulp-cleancss": "0.2.2",
+    "gulp-concat": "2.6.1",
+    "gulp-copy": "1.1.0",
+    "gulp-eslint": "4.0.2",
+    "gulp-less": "3.5.0",
+    "gulp-sync": "0.1.4",
+    "gulp-that": "0.9.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-watch-now": "0.9.1",
+    "vinyl-buffer": "1.0.1",
+    "vinyl-source-stream": "2.0.0"
+  }
+}

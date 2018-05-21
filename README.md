@@ -7,3 +7,4 @@ A set of templates to create web applications on [Node.js](https://nodejs.org/) 
 ## Templates
 
  - [AngularJS](angular-js)
+ - [React](react)
