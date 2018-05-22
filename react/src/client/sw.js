@@ -10,13 +10,14 @@ this.addEventListener('install', function (event) {
                 [
                     origin,
                     origin + 'index.html',
-                    origin + 'styles/styles.css',
                     origin + 'styles/vendor/bootstrap/css/bootstrap.min.css',
                     origin + 'styles/vendor/font-awesome/css/font-awesome.min.css',
+                    origin + 'styles/styles.css',
                     origin + 'scripts/scripts.js',
                     origin + 'images/pencils.jpg',
-                    origin + 'fonts/fontawesome-webfont.woff2',
-                    origin + 'fonts/OpenSans-Regular.ttf'
+                    origin + 'fonts/OpenSans-Regular.ttf',
+                    origin + 'styles/vendor/font-awesome/fonts/fontawesome-webfont.woff2',
+                    origin + 'manifest.json'
                 ]
             );
         }).catch(function (err) {
