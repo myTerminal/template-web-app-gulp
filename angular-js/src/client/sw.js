@@ -12,12 +12,16 @@ this.addEventListener('install', function (event) {
                     origin + 'index.html',
                     origin + 'styles/vendor/bootstrap/css/bootstrap.min.css',
                     origin + 'styles/vendor/font-awesome/css/font-awesome.min.css',
+                    origin + 'styles/vendor/font-awesome/fonts/fontawesome-webfont.woff2',
                     origin + 'styles/styles.css',
                     origin + 'scripts/scripts.js',
                     origin + 'images/pencils.jpg',
                     origin + 'fonts/OpenSans-Regular.ttf',
-                    origin + 'styles/vendor/font-awesome/fonts/fontawesome-webfont.woff2',
-                    origin + 'manifest.json'
+                    origin + 'icons/launcher-icon-1x.png',
+                    origin + 'icons/launcher-icon-2x.png',
+                    origin + 'icons/launcher-icon-4x.png',
+                    origin + 'manifest.json',
+                    origin + 'favicon.ico'
                 ]
             );
         }).catch(function (err) {
