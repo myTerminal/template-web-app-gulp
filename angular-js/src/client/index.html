@@ -22,6 +22,16 @@
 
     <body>
         <div class="banner"></div>
+        <div class="navigation">
+            <div class="navigation-button" ui-sref="home" ui-sref-active="active">
+                (<span class="fa fa-home"></span>)
+                Home
+            </div>
+            <div class="navigation-button" ui-sref="about" ui-sref-active="active">
+                (<span class="fa fa-info"></span>)
+                About
+            </div>
+        </div>
         <div id="page" ui-view></div>
 
         <script type="text/javascript" src="scripts/scripts.js?v=#cache-buster-token#"></script>
