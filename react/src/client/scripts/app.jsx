@@ -15,8 +15,9 @@ import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
 
 global.jQuery = require('jquery');
-const $ = global.jQuery,
-    Bootstrap = require('bootstrap');
+
+const $ = global.jQuery;
+const Bootstrap = require('bootstrap');
 
 class App extends React.Component {
     constructor() {
@@ -29,9 +30,14 @@ class App extends React.Component {
         return (
             <div>
                 <Banner />
-                <span className="fa fa-thumbs-o-up fa-lg" />
-                <NavLink to="/" exact activeClassName="active">Home</NavLink>
-                <NavLink to="/about" activeClassName="active">About</NavLink>
+                <div className="navigation">
+                    <NavLink to="/" exact className="navigation-button" activeClassName="active">
+                        (<span className="fa fa-home" />) Home
+                    </NavLink>
+                    <NavLink to="/about" className="navigation-button" activeClassName="active">
+                        (<span className="fa fa-info" />) About
+                    </NavLink>
+                </div>
                 <Route path="/" exact component={Home} />
                 <Route path="/about" component={About} />
             </div>
