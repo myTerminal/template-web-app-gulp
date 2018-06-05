@@ -1,10 +1,4 @@
-# template-web-gulp
-
-[![Code Climate](https://codeclimate.com/github/myTerminal/template-web-gulp.png)](https://codeclimate.com/github/myTerminal/template-web-gulp)  
-[![Dependency Status](https://david-dm.org/myTerminal/template-web-gulp.svg)](https://david-dm.org/myTerminal/template-web-gulp)
-[![devDependency Status](https://david-dm.org/myTerminal/template-web-gulp/dev-status.svg)](https://david-dm.org/myTerminal/template-web-gulp#info=devDependencies)
-[![peer Dependency Status](https://david-dm.org/myTerminal/template-web-gulp/peer-status.svg)](https://david-dm.org/myTerminal/template-web-gulp#info=peerDependencies)  
-[![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
+# react
 
 A template to create web applications on [Node.js](https://nodejs.org/) with [Gulp.js](https://www.npmjs.com/package/gulp) as the task-runner
 
