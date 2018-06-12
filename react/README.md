@@ -67,4 +67,5 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
 
 ## To-Do
 
- - Find a way to write and run tests
+ - Write unit-tests
+ - Implement CSS modules
