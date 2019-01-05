@@ -24,8 +24,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
 
 ##### Plugins
 
- - [gulp-clean](https://www.npmjs.com/package/gulp-clean) to clean up the output directory at the start of every build
- - [gulp-sync](https://www.npmjs.com/package/gulp-sync) to be able to run tasks synchronously
+ - [del](https://www.npmjs.com/package/del) to clean up the output directory at the start of every build
  - [gulp-concat](https://www.npmjs.com/package/gulp-concat) to concat files
  - [gulp-copy](https://www.npmjs.com/package/gulp-copy) to copy static resources to the output directory
  - [gulp-that](https://www.npmjs.com/package/gulp-that) to transform service-worker script to make sure it is updated on every build
@@ -37,31 +36,34 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) to minify JavaScript files
  - [gulp-angular-templatecache](https://www.npmjs.com/package/gulp-angular-templatecache) to compile AngularJS templates
  - [gulp-eslint](https://www.npmjs.com/package/gulp-eslint), [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import), [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) and [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) to run ESLint on JavaScript files
- - [gulp-watch-now](https://www.npmjs.com/package/gulp-watch-now) to watch over source files and run appropriate tasks
 
 ##### Tasks
 
  - build (default)
    - clean to clean the output directory
    - copy
-     - copy-bootstrap-css to copy Bootstrap CSS Stylesheets to the output directory
-     - copy-bootstrap-fonts to copy Bootstrap fonts to the output directory
-     - copy-html to copy all html entry-points to the output directory
-     - copy-others to copy data, fonts, images and favicon to the output directory
+     - copyBootstrapCss to copy Bootstrap CSS Stylesheets to the output directory
+     - copyBootstrapFonts to copy Bootstrap fonts to the output directory
+     - copyFontAwesomeCss to copy FontAwesome CSS Stylesheets to the output directory
+     - copyFontAwesomeFonts to copy FontAwesome fonts to the output directory
+     - copyOthers to copy data, fonts, images and favicon to the output directory
    - templates to compile AngularJS templates
    - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
    - scripts to concatenate, transpile & minify all JavaScript to the output directory
-   - copy-service-worker to copy the service-worker script to the output directory after a few transforms
+   - html to copy HTML page to the output directory
+   - copyServiceWorker to copy the service-worker script to the output directory after a few transforms
  - debug
    - clean to clean the output directory
    - copy
-     - copy-bootstrap-css to copy Bootstrap CSS Stylesheets to the output directory
-     - copy-bootstrap-fonts to copy Bootstrap fonts to the output directory
-     - copy-html to copy all html entry-points to the output directory
-     - copy-others to copy data, fonts, images and favicon to the output directory
+     - copyBootstrapCss to copy Bootstrap CSS Stylesheets to the output directory
+     - copyBootstrapFonts to copy Bootstrap fonts to the output directory
+     - copyFontAwesomeCss to copy FontAwesome CSS Stylesheets to the output directory
+     - copyFontAwesomeFonts to copy FontAwesome fonts to the output directory
+     - copyOthers to copy data, fonts, images and favicon to the output directory
    - templates to compile AngularJS templates
    - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
-   - scripts-debug to concatenate and transpile all JavaScript to the output directory
+   - scriptsDebug to concatenate and transpile all JavaScript to the output directory
+   - htmlDebug to copy HTML page to the output directory
    - lint to run ESLint over JavaScript files
  - lint
    - run ESLint over JavaScript files
