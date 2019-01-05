@@ -27,6 +27,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
 
  - [del](https://www.npmjs.com/package/del) to clean up the output directory at the start of every build
  - [gulp-concat](https://www.npmjs.com/package/gulp-concat) to concat files
+ - [gulp-ejs](https://www.npmjs.com/package/gulp-ejs) to compile HTML templates before copying them to the output directory
  - [gulp-copy](https://www.npmjs.com/package/gulp-copy) to copy static resources to the output directory
  - [gulp-that](https://www.npmjs.com/package/gulp-that) to transform service-worker script to make sure it is updated on every build
  - [gulp-less](https://www.npmjs.com/package/gulp-less) to transpile LESS stylesheets into CSS

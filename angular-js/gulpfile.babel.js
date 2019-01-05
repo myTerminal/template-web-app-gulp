@@ -6,6 +6,7 @@ const sourceDir = 'src/client',
 
 const gulp = require('gulp'),
     del = require('del'),
+    gulpEjs = require('gulp-ejs'),
     gulpCopy = require('gulp-copy'),
     gulpThat = require('gulp-that'),
     gulpAngularTemplateCache = require('gulp-angular-templatecache'),
@@ -107,7 +108,9 @@ const scripts = () =>
 const htmlDebug = () =>
     gulp.src([
         sourceDir + '/*.html'
-    ]).pipe(gulpThat(function (input) {
+    ]).pipe(gulpEjs({
+        titlePrefix: '[DEBUG] '
+    })).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, '');
     })).pipe(gulp.dest(outputDir));
@@ -115,7 +118,9 @@ const htmlDebug = () =>
 const html = () =>
     gulp.src([
         sourceDir + '/*.html'
-    ]).pipe(gulpThat(function (input) {
+    ]).pipe(gulpEjs({
+        titlePrefix: ''
+    })).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, (new Date()).getTime());
     })).pipe(gulp.dest(outputDir));
