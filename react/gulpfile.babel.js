@@ -17,44 +17,39 @@ const gulp = require('gulp'),
     buffer = require('vinyl-buffer'),
     browserify = require('browserify');
 
-const clean = (done) => {
-    return del([outputDir], done);
-};
+const clean = (done) =>
+    del([outputDir], done);
 
-const copyBootstrapCss = () => {
-    return gulp.src([
+const copyBootstrapCss = () =>
+    gulp.src([
         'node_modules/bootstrap/dist/css/bootstrap.min.css'
     ]).pipe(gulpCopy(outputDir + '/styles/vendor/bootstrap/css', {
         prefix: 4
     }));
-};
 
-const copyBootstrapFonts = () => {
-    return gulp.src([
+const copyBootstrapFonts = () =>
+    gulp.src([
         'node_modules/bootstrap/dist/fonts/**/*'
     ]).pipe(gulpCopy(outputDir + '/styles/vendor/bootstrap/fonts', {
         prefix: 4
     }));
-};
 
-const copyFontAwesomeCss = () => {
-    return gulp.src([
+const copyFontAwesomeCss = () =>
+    gulp.src([
         'node_modules/font-awesome/css/font-awesome.min.css'
     ]).pipe(gulpCopy(outputDir + '/styles/vendor/font-awesome/css', {
         prefix: 4
     }));
-};
 
-const copyFontAwesomeFonts = () => {
-    return gulp.src([
+const copyFontAwesomeFonts = () =>
+    gulp.src([
         'node_modules/font-awesome/fonts/**/*'
     ]).pipe(gulpCopy(outputDir + '/styles/vendor/font-awesome/fonts', {
         prefix: 4
     }));
-};
 
-const copyOthers = () => {
-    return gulp.src([
+const copyOthers = () =>
+    gulp.src([
         sourceDir + '/data/**/*',
         sourceDir + '/fonts/**/*',
         sourceDir + '/images/**/*',
@@ -64,7 +59,6 @@ const copyOthers = () => {
     ]).pipe(gulpCopy(outputDir, {
         prefix: 2
     }));
-};
 
 const copy = gulp.parallel(
     copyBootstrapCss,
@@ -74,16 +68,15 @@ const copy = gulp.parallel(
     copyOthers
 );
 
-const styles = () => {
-    return gulp.src(sourceDir + '/styles/**/*.less')
+const styles = () =>
+    gulp.src(sourceDir + '/styles/**/*.less')
         .pipe(gulpLess())
         .pipe(gulpConcat('styles.css'))
         .pipe(gulpCleanCss())
         .pipe(gulp.dest(outputDir + '/styles'));
-};
 
-const scriptsDebug = () => {
-    return browserify({
+const scriptsDebug = () =>
+    browserify({
         entries: sourceDir + '/scripts/app.jsx',
         debug: true
     }).transform('babelify')
@@ -91,10 +84,9 @@ const scriptsDebug = () => {
         .pipe(source('scripts.js'))
         .pipe(buffer())
         .pipe(gulp.dest(outputDir + '/scripts/'));
-};
 
-const scripts = () => {
-    return browserify({
+const scripts = () =>
+    browserify({
         entries: sourceDir + '/scripts/app.jsx'
     }).transform('babelify')
         .bundle()
@@ -102,42 +94,37 @@ const scripts = () => {
         .pipe(buffer())
         .pipe(gulpUglify())
         .pipe(gulp.dest(outputDir + '/scripts/'));
-};
 
-const htmlDebug = () => {
-    return gulp.src([
+const htmlDebug = () =>
+    gulp.src([
         sourceDir + '/*.html'
     ]).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, '');
     })).pipe(gulp.dest(outputDir));
-};
 
-const html = () => {
-    return gulp.src([
+const html = () =>
+    gulp.src([
         sourceDir + '/*.html'
     ]).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, (new Date()).getTime());
     })).pipe(gulp.dest(outputDir));
-};
 
-const copyServiceWorker = () => {
-    return gulp.src([
+const copyServiceWorker = () =>
+    gulp.src([
         sourceDir + '/sw.js'
     ]).pipe(gulpThat(function (input) {
         return input
             .replace(/#sw-cache-string#/g, (new Date().getTime()))
             .replace(/#sw-origin#/g, configs.origin);
     })).pipe(gulp.dest(outputDir));
-};
 
-const lint = () => {
-    return gulp.src(sourceDir + '/scripts/**/*.js')
+const lint = () =>
+    gulp.src(sourceDir + '/scripts/**/*.js')
         .pipe(gulpEslint())
         .pipe(gulpEslint.format())
         .pipe(gulpEslint.failAfterError());
-};
 
 const debug = gulp.series(
     clean,
