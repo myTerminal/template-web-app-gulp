@@ -56,7 +56,6 @@ const copyOthers = () =>
         sourceDir + '/fonts/**/*',
         sourceDir + '/images/**/*',
         sourceDir + '/icons/**/*',
-        sourceDir + '/manifest.json',
         sourceDir + '/favicon.ico'
     ]).pipe(gulpCopy(outputDir, {
         prefix: 2
@@ -77,6 +76,22 @@ const templates = () =>
             module: 'templateWeb'
         }))
         .pipe(gulp.dest(outputDir + '/scripts'));
+
+const manifestDebug = () =>
+    gulp.src([
+        sourceDir + '/manifest.json'
+    ]).pipe(gulpThat(function (input) {
+        return input
+            .replace(/#manifest-origin#/g, '/');
+    })).pipe(gulp.dest(outputDir));
+
+const manifest = () =>
+    gulp.src([
+        sourceDir + '/manifest.json'
+    ]).pipe(gulpThat(function (input) {
+        return input
+            .replace(/#manifest-origin#/g, configs.origin);
+    })).pipe(gulp.dest(outputDir));
 
 const styles = () =>
     gulp.src(sourceDir + '/styles/**/*.less')
@@ -109,7 +124,8 @@ const htmlDebug = () =>
     gulp.src([
         sourceDir + '/*.html'
     ]).pipe(gulpEjs({
-        titlePrefix: '[DEBUG] '
+        titlePrefix: '[DEBUG] ',
+        baseUrl: '/'
     })).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, '');
@@ -119,7 +135,8 @@ const html = () =>
     gulp.src([
         sourceDir + '/*.html'
     ]).pipe(gulpEjs({
-        titlePrefix: ''
+        titlePrefix: '',
+        baseUrl: configs.domain + configs.origin
     })).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, (new Date()).getTime());
@@ -144,6 +161,7 @@ const debug = gulp.series(
     clean,
     copy,
     templates,
+    manifestDebug,
     styles,
     scriptsDebug,
     htmlDebug,
@@ -154,6 +172,7 @@ const build = gulp.series(
     clean,
     copy,
     templates,
+    manifest,
     styles,
     scripts,
     html,

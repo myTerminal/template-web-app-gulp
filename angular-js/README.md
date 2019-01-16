@@ -48,6 +48,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
      - copyFontAwesomeCss to copy FontAwesome CSS Stylesheets to the output directory
      - copyFontAwesomeFonts to copy FontAwesome fonts to the output directory
      - copyOthers to copy data, fonts, images and favicon to the output directory
+   - manifest to generate manifest file for release mode
    - templates to compile AngularJS templates
    - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
    - scripts to concatenate, transpile & minify all JavaScript to the output directory
@@ -61,6 +62,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
      - copyFontAwesomeCss to copy FontAwesome CSS Stylesheets to the output directory
      - copyFontAwesomeFonts to copy FontAwesome fonts to the output directory
      - copyOthers to copy data, fonts, images and favicon to the output directory
+   - manifestDebug to generate manifest file for debug mode
    - templates to compile AngularJS templates
    - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
    - scriptsDebug to concatenate and transpile all JavaScript to the output directory
