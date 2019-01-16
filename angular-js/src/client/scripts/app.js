@@ -14,9 +14,12 @@ angular.module('templateWeb', ['ui.router'])
 
     .config([
         '$stateProvider',
+        '$locationProvider',
         '$urlRouterProvider',
-        function ($stateProvider, $urlRouterProvider) {
+        function ($stateProvider, $locationProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home');
+
+            $locationProvider.html5Mode(true);
 
             $stateProvider
                 .state('home', {
