@@ -46,7 +46,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render((
-    <BrowserRouter>
+    <BrowserRouter basename={baseUrl}>
         <App />
     </BrowserRouter>
 ), document.getElementById('page'));

@@ -55,7 +55,6 @@ const copyOthers = () =>
         sourceDir + '/fonts/**/*',
         sourceDir + '/images/**/*',
         sourceDir + '/icons/**/*',
-        sourceDir + '/manifest.json',
         sourceDir + '/favicon.ico'
     ]).pipe(gulpCopy(outputDir, {
         prefix: 2
@@ -69,6 +68,22 @@ const copy = gulp.parallel(
     copyOthers
 );
 
+const manifestDebug = () =>
+    gulp.src([
+        sourceDir + '/manifest.json'
+    ]).pipe(gulpThat(function (input) {
+        return input
+            .replace(/#manifest-origin#/g, '/');
+    })).pipe(gulp.dest(outputDir));
+
+const manifest = () =>
+    gulp.src([
+        sourceDir + '/manifest.json'
+    ]).pipe(gulpThat(function (input) {
+        return input
+            .replace(/#manifest-origin#/g, configs.origin);
+    })).pipe(gulp.dest(outputDir));
+
 const styles = () =>
     gulp.src(sourceDir + '/styles/**/*.less')
         .pipe(gulpLess())
@@ -79,7 +94,10 @@ const styles = () =>
 const scriptsDebug = () =>
     browserify({
         entries: sourceDir + '/scripts/app.jsx',
-        debug: true
+        debug: true,
+        insertGlobalVars: {
+            baseUrl: () => JSON.stringify('/')
+        }
     }).transform('babelify')
         .bundle()
         .pipe(source('scripts.js'))
@@ -88,7 +106,10 @@ const scriptsDebug = () =>
 
 const scripts = () =>
     browserify({
-        entries: sourceDir + '/scripts/app.jsx'
+        entries: sourceDir + '/scripts/app.jsx',
+        insertGlobalVars: {
+            baseUrl: () => JSON.stringify(configs.origin)
+        }
     }).transform('babelify')
         .bundle()
         .pipe(source('scripts.js'))
@@ -100,7 +121,8 @@ const htmlDebug = () =>
     gulp.src([
         sourceDir + '/*.html'
     ]).pipe(gulpEjs({
-        titlePrefix: '[DEBUG] '
+        titlePrefix: '[DEBUG] ',
+        baseUrl: '/'
     })).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, '');
@@ -110,7 +132,8 @@ const html = () =>
     gulp.src([
         sourceDir + '/*.html'
     ]).pipe(gulpEjs({
-        titlePrefix: ''
+        titlePrefix: '',
+        baseUrl: configs.domain + configs.origin
     })).pipe(gulpThat(function (input) {
         return input
             .replace(/#cache-buster-token#/g, (new Date()).getTime());
@@ -134,6 +157,7 @@ const lint = () =>
 const debug = gulp.series(
     clean,
     copy,
+    manifestDebug,
     styles,
     scriptsDebug,
     htmlDebug,
@@ -143,6 +167,7 @@ const debug = gulp.series(
 const build = gulp.series(
     clean,
     copy,
+    manifest,
     styles,
     scripts,
     html,

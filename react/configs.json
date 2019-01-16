@@ -1,3 +1,4 @@
 {
-    "origin": "/"
+    "domain": "http://localhost:8000",
+    "origin": "/public/"
 }
