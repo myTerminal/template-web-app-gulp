@@ -40,35 +40,35 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
 
 ##### Tasks
 
- - build (default)
-   - clean to clean the output directory
-   - copy
-     - copyBootstrapCss to copy Bootstrap CSS Stylesheets to the output directory
-     - copyBootstrapFonts to copy Bootstrap fonts to the output directory
-     - copyFontAwesomeCss to copy FontAwesome CSS Stylesheets to the output directory
-     - copyFontAwesomeFonts to copy FontAwesome fonts to the output directory
-     - copyOthers to copy data, fonts, images and favicon to the output directory
-   - manifest to generate manifest file for release mode
-   - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
-   - scripts to concatenate, transpile & minify all JavaScript to the output directory
-   - html to copy HTML page to the output directory
-   - copyServiceWorker to copy the service-worker script to the output directory after a few transforms
- - debug
-   - clean to clean the output directory
-   - copy
-     - copyBootstrapCss to copy Bootstrap CSS Stylesheets to the output directory
-     - copyBootstrapFonts to copy Bootstrap fonts to the output directory
-     - copyFontAwesomeCss to copy FontAwesome CSS Stylesheets to the output directory
-     - copyFontAwesomeFonts to copy FontAwesome fonts to the output directory
-     - copyOthers to copy data, fonts, images and favicon to the output directory
-   - manifestDebug to generate manifest file for debug mode
-   - styles to transpile Less CSS stylesheets into CSS stylesheets for the output directory
-   - scriptsDebug to concatenate and transpile all JavaScript to the output directory
-   - htmlDebug to copy HTML page to the output directory
-   - lint to run ESLint over JavaScript files
- - lint
+ - **build** (default)
+   - **clean** to clean the output directory
+   - **copy**
+     - **copyBootstrapCss** to copy Bootstrap CSS Stylesheets to the output directory
+     - **copyBootstrapFonts** to copy Bootstrap fonts to the output directory
+     - **copyFontAwesomeCss** to copy FontAwesome CSS Stylesheets to the output directory
+     - **copyFontAwesomeFonts** to copy FontAwesome fonts to the output directory
+     - **copyOthers** to copy data, fonts, images and favicon to the output directory
+   - **manifest** to generate manifest file for release mode
+   - **styles** to transpile Less CSS stylesheets into CSS stylesheets for the output directory
+   - **scripts** to concatenate, transpile & minify all JavaScript to the output directory
+   - **html** to copy HTML page to the output directory
+   - **copyServiceWorker** to copy the service-worker script to the output directory after a few transforms
+ - **debug**
+   - **clean** to clean the output directory
+   - **copy**
+     - **copyBootstrapCss** to copy Bootstrap CSS Stylesheets to the output directory
+     - **copyBootstrapFonts** to copy Bootstrap fonts to the output directory
+     - **copyFontAwesomeCss** to copy FontAwesome CSS Stylesheets to the output directory
+     - **copyFontAwesomeFonts** to copy FontAwesome fonts to the output directory
+     - **copyOthers** to copy data, fonts, images and favicon to the output directory
+   - **manifestDebug** to generate manifest file for debug mode
+   - **styles** to transpile Less CSS stylesheets into CSS stylesheets for the output directory
+   - **scriptsDebug** to concatenate and transpile all JavaScript to the output directory
+   - **htmlDebug** to copy HTML page to the output directory
+   - **lint** to run ESLint over JavaScript files
+ - **lint**
    - run ESLint over JavaScript files
- - develop to watch over the source files and run tasks related to the changed files
+ - **develop** to watch over the source files and run tasks related to the changed files
 
 ## To-Do
 
