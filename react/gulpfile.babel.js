@@ -93,7 +93,7 @@ const styles = () =>
 
 const scriptsDebug = () =>
     browserify({
-        entries: sourceDir + '/scripts/app.jsx',
+        entries: sourceDir + '/scripts/index.jsx',
         debug: true,
         insertGlobalVars: {
             baseUrl: () => JSON.stringify('/')
@@ -106,7 +106,7 @@ const scriptsDebug = () =>
 
 const scripts = () =>
     browserify({
-        entries: sourceDir + '/scripts/app.jsx',
+        entries: sourceDir + '/scripts/index.jsx',
         insertGlobalVars: {
             baseUrl: () => JSON.stringify(configs.origin)
         }
