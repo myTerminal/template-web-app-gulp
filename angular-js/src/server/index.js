@@ -16,7 +16,7 @@ module.exports = function (url) {
         console.log(appName, 'started on', url);
     });
 
-    app.get('/', function (req, res) {
+    app.get('*', function (req, res) {
         res.send(fs.readFileSync(baseUrl + '/public/index.html', 'utf8'));
     });
 };
