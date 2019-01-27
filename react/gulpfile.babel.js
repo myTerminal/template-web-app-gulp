@@ -51,7 +51,6 @@ const copyFontAwesomeFonts = () =>
 
 const copyOthers = () =>
     gulp.src([
-        sourceDir + '/data/**/*',
         sourceDir + '/fonts/**/*',
         sourceDir + '/images/**/*',
         sourceDir + '/icons/**/*',

@@ -1,7 +1,7 @@
 /* global module require __dirname */
 
 module.exports = function (url) {
-    var appName = 'template-web',
+    const appName = 'template-web',
         path = require('path'),
         express = require('express'),
         app = express(),
