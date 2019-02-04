@@ -1,22 +1,24 @@
 /* global module require __dirname */
 
+const appName = 'template-web';
+
+const path = require('path'),
+    express = require('express'),
+    bodyParser = require('body-parser'),
+    fs = require('fs');
+
 module.exports = function (url) {
-    const appName = 'template-web',
-        path = require('path'),
-        express = require('express'),
-        app = express(),
-        bodyParser = require('body-parser'),
-        fs = require('fs'),
+    const app = express(),
         baseUrl = path.join(__dirname, '../../');
 
     app.use(express.static(path.join(baseUrl, 'public')));
     app.use(bodyParser.json());
 
-    app.listen(url, function () {
+    app.listen(url, () => {
         console.log(appName, 'started on', url);
     });
 
-    app.get('*', function (req, res) {
-        res.send(fs.readFileSync(baseUrl + '/public/index.html', 'utf8'));
+    app.get('*', (req, res) => {
+        res.send(fs.readFileSync(`${baseUrl}/public/index.html`, 'utf8'));
     });
 };
