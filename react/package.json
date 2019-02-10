@@ -21,10 +21,10 @@
   "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.7.1",
     "body-parser": "1.18.3",
     "bootstrap": "3.3.7",
     "express": "4.16.4",
-    "font-awesome": "4.7.0",
     "jquery": "3.3.1",
     "react": "16.7.0",
     "react-dom": "16.7.0",

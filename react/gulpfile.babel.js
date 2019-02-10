@@ -37,15 +37,15 @@ const copyBootstrapFonts = () =>
 
 const copyFontAwesomeCss = () =>
     gulp.src([
-        'node_modules/font-awesome/css/font-awesome.min.css'
+        'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
     ]).pipe(gulpCopy(outputDir + '/styles/vendor/font-awesome/css', {
         prefix: 4
     }));
 
 const copyFontAwesomeFonts = () =>
     gulp.src([
-        'node_modules/font-awesome/fonts/**/*'
-    ]).pipe(gulpCopy(outputDir + '/styles/vendor/font-awesome/fonts', {
+        'node_modules/@fortawesome/fontawesome-free/webfonts/**/*'
+    ]).pipe(gulpCopy(outputDir + '/styles/vendor/font-awesome/webfonts', {
         prefix: 4
     }));
 

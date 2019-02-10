@@ -21,10 +21,10 @@ export default class App extends React.Component {
                 <Banner />
                 <div className="navigation">
                     <NavLink to="/" exact className="navigation-button" activeClassName="active">
-                        (<span className="fa fa-home" />) Home
+                        (<span className="fas fa-home" />) Home
                     </NavLink>
                     <NavLink to="/about" className="navigation-button" activeClassName="active">
-                        (<span className="fa fa-info" />) About
+                        (<span className="fas fa-info" />) About
                     </NavLink>
                 </div>
                 <Route path="/" exact component={Home} />
