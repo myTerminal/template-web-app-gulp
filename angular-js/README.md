@@ -30,6 +30,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [gulp-ejs](https://www.npmjs.com/package/gulp-ejs) to compile HTML templates before copying them to the output directory
  - [gulp-that](https://www.npmjs.com/package/gulp-that) to transform service-worker script to make sure it is updated on every build
  - [gulp-less](https://www.npmjs.com/package/gulp-less) to transpile LESS stylesheets into CSS
+ - [effortless-css](https://www.npmjs.com/package/effortless-css) to provide Less CSS mixins
  - [gulp-cleancss](https://www.npmjs.com/package/gulp-cleancss) to minify CSS
  - [browserify](https://www.npmjs.com/package/browserify) to `require` JavaScript libraries from within the web browser
  - [vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer) and [vinyl-source-stream](https://www.npmjs.com/package/vinyl-source-stream) to work with browserify
