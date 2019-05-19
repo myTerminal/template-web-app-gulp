@@ -49,6 +49,20 @@ const copyFontAwesomeFonts = () =>
         prefix: 4
     }));
 
+const copyAmpleAlertsCss = () =>
+    gulp.src([
+        'node_modules/ample-alerts/build/styles/**/*'
+    ]).pipe(gulpCopy(outputDir + '/styles/vendor/ample-alerts/css', {
+        prefix: 4
+    }));
+
+const copyAmpleAlertsFonts = () =>
+    gulp.src([
+        'node_modules/ample-alerts/build/fonts/**/*'
+    ]).pipe(gulpCopy(outputDir + '/styles/vendor/ample-alerts/fonts', {
+        prefix: 4
+    }));
+
 const copyOthers = () =>
     gulp.src([
         sourceDir + '/fonts/**/*',
@@ -64,6 +78,8 @@ const copy = gulp.parallel(
     copyBootstrapFonts,
     copyFontAwesomeCss,
     copyFontAwesomeFonts,
+    copyAmpleAlertsCss,
+    copyAmpleAlertsFonts,
     copyOthers
 );
 
