@@ -128,14 +128,17 @@ if ('serviceWorker' in navigator) {
             // Retrieve the 'install' button
             installButton = document.getElementById('pwa-install');
 
-            // Unhide he button
-            installButton.style.display = '';
+            // Check if the button is present
+            if (installButton) {
+                // Unhide the button
+                installButton.style.display = '';
 
-            // Attach event on click for install
-            installButton.addEventListener(
-                'click',
-                installApp
-            );
+                // Attach event on click for install
+                installButton.addEventListener(
+                    'click',
+                    installApp
+                );
+            }
         }
     );
 
