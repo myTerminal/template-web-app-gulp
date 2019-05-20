@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './components/app.jsx';
 
-import './service-worker-starter.js';
+import './pwa.js';
 
 global.jQuery = require('jquery');
 
