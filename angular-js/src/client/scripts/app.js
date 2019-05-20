@@ -1,6 +1,6 @@
 /* global global require */
 
-require('./service-worker-starter');
+require('./pwa');
 
 global.jQuery = require('jquery');
 
