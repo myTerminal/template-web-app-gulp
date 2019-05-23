@@ -24,7 +24,7 @@
     "@fortawesome/fontawesome-free": "5.7.1",
     "ample-alerts": "1.2.2",
     "body-parser": "1.18.3",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "express": "4.16.4",
     "jquery": "3.3.1",
     "react": "16.8.1",
