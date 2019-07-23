@@ -1,6 +1,6 @@
 # template-web-gulp
 
-[![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
+[![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 
 A set of templates to create web applications on [Node.js](https://nodejs.org/) with [Gulp.js](https://www.npmjs.com/package/gulp) as the task-runner
 
