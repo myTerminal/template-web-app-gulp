@@ -19,7 +19,7 @@
     "template"
   ],
   "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.7.1",
     "ample-alerts": "1.2.2",
