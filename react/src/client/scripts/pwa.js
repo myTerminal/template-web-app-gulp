@@ -144,7 +144,7 @@ if ('serviceWorker' in navigator) {
 
     window.addEventListener(
         'appinstalled',
-        evt => {
+        () => {
             // The app installation is complete (or the app was already installed)
             alert(
                 'The app has been installed!',
