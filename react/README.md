@@ -38,7 +38,7 @@ A template to create web applications on [Node.js](https://nodejs.org/) with [Gu
  - [vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer) and [vinyl-source-stream](https://www.npmjs.com/package/vinyl-source-stream) to work with browserify
  - [babelify](https://www.npmjs.com/package/babelify), [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) and [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) for ES2015 and JSX transpilation
  - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) to minify JavaScript files
- - [gulp-eslint](https://www.npmjs.com/package/gulp-eslint), [babel-eslint](https://www.npmjs.com/package/babel-eslint), [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import), [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) and [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) to run ESLint on JavaScript files
+ - [gulp-eslint](https://www.npmjs.com/package/gulp-eslint), [babel-eslint](https://www.npmjs.com/package/babel-eslint), [eslint-config-myterminal](https://www.npmjs.com/package/eslint-config-myterminal), [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import), [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) and [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) to run ESLint on JavaScript files
 
 ##### Tasks
 
