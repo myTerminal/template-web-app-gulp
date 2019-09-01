@@ -88,7 +88,7 @@ const templates = () =>
     gulp.src(`${sourceDir}/scripts/templates/*.html`)
         .pipe(gulpAngularTemplateCache({
             root: 'scripts/templates',
-            module: 'templateWeb'
+            module: 'templateWebApp'
         }))
         .pipe(gulp.dest(`${outputDir}/scripts`));
 

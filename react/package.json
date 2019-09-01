@@ -1,7 +1,7 @@
 {
-  "name": "template-web",
+  "name": "template-web-app",
   "version": "0.9.0",
-  "description": "template-web",
+  "description": "template-web-app",
   "main": "src/server/index.js",
   "scripts": {
     "gulp": "gulp",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:myTerminal/template-web-gulp.git"
+    "url": "git@github.com:myTerminal/template-web-app-gulp.git"
   },
   "bugs": {
-    "url": "https://github.com/myTerminal/template-web-gulp/issues"
+    "url": "https://github.com/myTerminal/template-web-app-gulp/issues"
   },
-  "homepage": "https://github.com/myTerminal/template-web-gulp#readme",
+  "homepage": "https://github.com/myTerminal/template-web-app-gulp#readme",
   "keywords": [
     "template"
   ],

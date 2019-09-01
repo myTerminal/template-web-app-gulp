@@ -1,6 +1,6 @@
 /* global module require __dirname */
 
-const appName = 'template-web';
+const appName = 'template-web-app';
 
 const path = require('path'),
     express = require('express'),
