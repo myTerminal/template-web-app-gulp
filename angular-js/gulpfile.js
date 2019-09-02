@@ -1,4 +1,4 @@
-/* global require */
+/* global require module */
 
 const sourceDir = 'src/client',
     outputDir = 'public',
@@ -227,11 +227,10 @@ const develop = () => {
     );
 };
 
-export {
+module.exports = {
     debug,
     build,
     develop,
-    lint
+    lint,
+    default: build
 };
-
-export default build;
