@@ -23,7 +23,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.7.1",
     "ample-alerts": "1.2.2",
-    "angular": "1.7.6",
+    "angular": "1.8.0",
     "angular-ui-router": "1.0.20",
     "body-parser": "1.18.3",
     "bootstrap": "3.3.7",
