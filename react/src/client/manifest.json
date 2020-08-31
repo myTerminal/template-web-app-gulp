@@ -1,6 +1,6 @@
 {
   "short_name": "template-web-app",
-  "name": "template-web-app-webpack: A template to create web applications",
+  "name": "template-web-app-gulp: A template to create web applications",
   "icons": [
     {
       "src": "icons/launcher-icon-1x.png",
